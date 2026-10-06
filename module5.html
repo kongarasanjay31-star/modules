@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>User Dashboard</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <h2>ConnectHub</h2>
+
+    <nav>
+
+        <a href="user-dashboard.html">
+            Home
+        </a>
+
+        <a href="profile.html">
+            Profile
+        </a>
+
+        <button onclick="logout()">
+            Logout
+        </button>
+
+    </nav>
+
+</header>
+
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <h3 id="welcomeUser">
+            Welcome
+        </h3>
+
+        <a href="user-dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="profile.html">
+            My Profile
+        </a>
+
+        <button onclick="logout()">
+            Logout
+        </button>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <h1>User Dashboard</h1>
+
+
+        <!-- Create Post -->
+
+        <div class="post-box">
+
+            <h3>Create a Post</h3>
+
+            <textarea
+                id="postText"
+                placeholder="What's on your mind?"
+            ></textarea>
+
+            <button
+                class="btn"
+                onclick="createPost()">
+
+                Post
+
+            </button>
+
+        </div>
+
+
+        <!-- Feed -->
+
+        <h2>Recent Posts</h2>
+
+        <div id="feed"></div>
+
+    </main>
+
+</div>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

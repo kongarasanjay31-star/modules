@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Social Media Login</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-container {
+            width: 350px;
+        }
+
+        .login-box {
+            background: white;
+            border: 1px solid #dbdbdb;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: cursive;
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 5px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 4px;
+            background: #fafafa;
+            font-size: 12px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background: #0095f6;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1877d2;
+        }
+
+        #message {
+            margin-top: 12px;
+            font-size: 13px;
+        }
+
+        .or {
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+            color: #777;
+        }
+
+        .or::before,
+        .or::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #dbdbdb;
+        }
+
+        .or span {
+            margin: 0 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .facebook {
+            display: block;
+            color: #385185;
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        .forgot {
+            color: #00376b;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        .signup-box {
+            background: white;
+            border: 1px solid #dbdbdb;
+            margin-top: 10px;
+            padding: 25px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .signup-box a {
+            color: #0095f6;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-box">
+
+            <h1>Social</h1>
+
+            <input type="text" id="username"
+                   placeholder="Phone number, username, or email">
+
+            <input type="password" id="password"
+                   placeholder="Password">
+
+            <button onclick="login()">Log In</button>
+
+            <p id="message"></p>
+
+            <div class="or">
+                <span>OR</span>
+            </div>
+
+            <a href="#" class="facebook">
+                Log in with Facebook
+            </a>
+
+            <a href="#" class="forgot">
+                Forgot password?
+            </a>
+
+        </div>
+
+        <div class="signup-box">
+            Don't have an account?
+            <a href="#">Sign up</a>
+        </div>
+
+    </div>
+
+    <script>
+        function login() {
+
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let message = document.getElementById("message");
+
+            if (username === "" || password === "") {
+                message.innerHTML = "Please enter username and password";
+                message.style.color = "red";
+            } 
+            else {
+                message.innerHTML = "Login successful!";
+                message.style.color = "green";
+            }
+        }
+    </script>
+
+</body>
+</html>
